@@ -15,8 +15,10 @@ let playerScore = 0;
 let computerScore = 0;
 let rounds = parseInt(prompt("How many rounds do you want to play?"));
 
+let i = 1;
 
-while(rounds > 0){
+
+while(i <= rounds){
     let playerChoice = prompt("rock, paper, or scissors?").toLowerCase();
     let computerChoice = getComputerChoice();
 
@@ -33,7 +35,7 @@ while(rounds > 0){
     }
 
     rounds--;
-    console.log(`Round: ${rounds}, Player Score: ${playerScore}, Computer Score: ${computerScore}`);
+    console.log(`Round: ${i}, Player Score: ${playerScore}, Computer Score: ${computerScore}`);
     // choice = prompt("Do you want to play again? (yes/no)").toLowerCase();
 }
 
