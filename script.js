@@ -34,9 +34,9 @@ while(i <= rounds){
         computerScore++;
     }
 
-    i++;
+    
     console.log(`Round: ${i}, Player Score: ${playerScore}, Computer Score: ${computerScore}`);
-    // choice = prompt("Do you want to play again? (yes/no)").toLowerCase();
+    i++;// choice = prompt("Do you want to play again? (yes/no)").toLowerCase();
 }
 
 if(playerScore > computerScore){
