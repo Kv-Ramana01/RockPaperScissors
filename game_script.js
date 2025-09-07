@@ -36,14 +36,16 @@ function handlePlayerChoice(e) {
     console.log(computerChoice);
 
     if (playerChoice === computerChoice) {
-        user_interface.textContent = "It's a tie! Both chose " + playerChoice;
+        user_interface.textContent = "You both dodged each other's attacks!";
     } else if ((playerChoice === "rock" && computerChoice === "scissors") ||
         (playerChoice === "paper" && computerChoice === "rock") ||
         (playerChoice === "scissors" && computerChoice === "paper")) {
-        user_interface.textContent = "You win! " + playerChoice + " beats " + computerChoice;
+        user_interface.textContent = "You landed an attack! Demogorgan is tweaking... " + playerChoice + " beats " + computerChoice;
         playerScore++;
     } else {
-        user_interface.textContent = "You lose! " + computerChoice + " beats " + playerChoice;
+        let array = ["you just lost a leg!", "you just lost an arm!", "you just lost an eye!", "you just lost a finger!", "you just lost a toe!"];
+        let num = Math.floor(Math.random() * array.length);
+        user_interface.textContent = array[num] +" "+ computerChoice + " beats " + playerChoice;
         compScore++;
     }
 
@@ -76,11 +78,11 @@ function game_start() {
 
 function endGame() {
     if (playerScore > compScore) {
-        user_interface.textContent = "Game over! You win with a score of " + playerScore + " to " + compScore;
+        user_interface.textContent = "THE END! You just jumped the demogorgan! Score ratio " + playerScore + " to " + compScore;
     } else if (compScore > playerScore) {
-        user_interface.textContent = "Game over! You lose with a score of " + playerScore + " to " + compScore;
+        user_interface.textContent = "You have been pulvarized.. Score ratio  " + playerScore + " to " + compScore;
     } else {
-        user_interface.textContent = "Game over! It's a tie with a score of " + playerScore + " to " + compScore;
+        user_interface.textContent = "Um Awakward.. You both are staring at eachother... Score ratio(tie) " + playerScore + " to " + compScore;
     }
     gameState = false;
     user_interface.textContent += " You can go again if you want!";
