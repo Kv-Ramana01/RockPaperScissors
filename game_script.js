@@ -3,6 +3,8 @@ const start = document.querySelector('#start-signal');
 const result = document.querySelector('#result');
 const user_interface = document.querySelector('#user-interface');
 
+user_interface.setAttribute("style","color:red;")
+
 const playerScore_span = document.querySelector('#player-score');
 const computerScore_span = document.querySelector('#comp-score');
 
@@ -61,6 +63,7 @@ function handlePlayerChoice(e) {
 
 
 function game_start() {
+    gameState = true;
 
     start.textContent = "START!";
     user_interface.textContent = "";
@@ -103,9 +106,11 @@ function endGame() {
 
 item.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-        start.textContent = "START!"
+        
+        if(!gameState){
+            start.textContent = "START!"
 
-        gameState = true;
+        
         games = parseInt(item.value);
         item.value = "";
         result.textContent = "Choose your weapon!";
@@ -116,6 +121,9 @@ item.addEventListener('keydown', function (event) {
         } else {
 
             game_start(games);
+        }
+        }else{
+            start.textContent = "GAME IS ALREADY RUNNING!";
         }
 
     }
