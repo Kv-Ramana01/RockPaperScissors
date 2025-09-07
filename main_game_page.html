@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ROCKY went Scissors!</title>
+    <link rel="stylesheet" href="game_style.css">
 </head>
+
 <body>
-    hello world
+    <div id="main-container">
+        <div>
+            <h1 id="Title">ROCK-FLIX</h1>
+        </div>
+        <div id="score-board">
+            <div class = "player-label">
+                <div id="user-label" class="badge"><img src="images/player.png" alt=""></div>
+                <div id="score">Score : <span id="player-score"></span></div>
+            </div>
+            <div id = "interface">
+                <div>
+                    <p class = "games_count">how many attacks?</p>
+                    <input type="text" name="" id="Number-of-games" placeholder="Enter a number">
+                </div>
+                <div>
+                    <p id="start-signal">start</p>
+                    <p id = "user-interface">Demogorgan ate your hand! USe your powers!</p>
+                </div>
+            </div>
+            <div class = "comp-label">
+                <div id="comp-label" class="badge"><img src="images/computer.png" alt=""></div>
+                <div id="score">Score : <span id = "comp-score"></span></div>
+            </div>
+        </div>
+
+        <div id="result">
+            <p>Make your move!</p>
+        </div>
+
+        <div id="choices">
+            <div class="choice" id="r">
+                <button><img src="images/Rock.png" alt="rock" height="150" width="150"></button>
+            </div>
+            <div class="choice" id="p">
+                <button><img src="images/paper.png" alt="paper" height="150" width="150"></button>
+            </div>
+            <div class="choice" id="s">
+                <button><img src="images/scissors.png" alt="scissors" height="150"
+                    width="150"></button>
+            </div>
+
+        </div>
+
+        <div id = "footer">
+            <p>Developed by Wiz_rckstr</p>
+        </div>
+
+
+
+    </div>
 </body>
+
 </html>
