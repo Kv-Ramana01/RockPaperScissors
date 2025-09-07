@@ -201,3 +201,42 @@ body{
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.6); /* Glow effect */
     border-color: rgb(255, 0, 0);
 }
+
+.choice button {
+    transition: transform 0.3s ease-in-out, box-shadow 0.2s ease;
+}
+
+.choice button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#user-interface {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #choices {
+        flex-direction: column;
+    }
+
+    #score-board {
+        flex-direction: column;
+    }
+
+    .player-label, .comp-label {
+        width: 80%;
+    }
+}
+
